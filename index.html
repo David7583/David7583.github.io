@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ruixin Yang 的工程项目作品集：空间计算、可追溯知识基础设施与 AI 治理工具。">
+  <meta name="color-scheme" content="light">
+  <title>Ruixin Yang — Engineering Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a0d10'/%3E%3Cpath d='M17 16h13c9 0 15 5 15 13 0 5-3 9-8 11l11 8H37L24 38v10h-7V16Zm7 7v10h6c5 0 8-2 8-5s-3-5-8-5h-6Z' fill='%23d8ff4f'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#projects" data-i18n="skip">跳到项目</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Ruixin Yang home">
+      <span class="brand-mark">RY</span>
+      <span>Ruixin Yang</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#projects" data-i18n="navProjects">项目</a>
+      <a href="#contact" data-i18n="navContact">联系</a>
+      <a class="resume-button" href="resume.html" data-i18n="resume">Resume</a>
+      <button class="lang-switch" type="button" aria-label="Switch to English" aria-pressed="false">EN</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="eyebrow" data-i18n="heroEyebrow">计算系统 · 数据治理 · 工程原型</div>
+      <h1 id="hero-title" data-i18n="heroTitle">把复杂规则做成<br>可运行、可检查的系统。</h1>
+      <p class="hero-copy" data-i18n="heroCopy">我关注空间计算与数字治理：把约束、来源和运行证据放进软件，让结果不只可见，也能被验证。</p>
+      <div class="hero-meta" aria-label="Portfolio highlights">
+        <span><b>03</b><em data-i18n="metaCore">核心项目</em></span>
+        <span><b>05</b><em data-i18n="metaOpen">开源仓库</em></span>
+        <span><b>09</b><em data-i18n="metaShots">真实运行截图</em></span>
+      </div>
+    </section>
+
+    <section class="projects" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <span class="section-index">01</span>
+        <div>
+          <p class="kicker" data-i18n="selectedWork">SELECTED WORK</p>
+          <h2 id="projects-title" data-i18n="projectsTitle">核心项目</h2>
+        </div>
+      </div>
+
+      <article class="project project-featured" id="sc-tse">
+        <header class="project-intro">
+          <div>
+            <p class="project-number">01 / CORE</p>
+            <h3>SC‑TSE</h3>
+          </div>
+          <p data-i18n="scSummary">面向场地布局的确定性计算与校验系统。它接收结构化场地、体块和约束，运行布局、连通性、道路与出入口检查，并把通过、阻断与具体违规证据返回给使用者。</p>
+        </header>
+
+        <figure class="media-main">
+          <button class="image-button" type="button" data-lightbox="assets/images/sc-tse-factory-layout.png" data-title-zh="SC‑TSE 厂区二维布局求解结果" data-title-en="SC‑TSE 2D industrial site layout result">
+            <img src="assets/images/sc-tse-factory-layout.png" alt="SC-TSE 生成的厂区二维体块布局，包含生产车间、仓库、办公楼与入口" loading="lazy" width="1400" height="1000">
+            <span class="zoom-label" data-i18n="openImage">点击查看</span>
+          </button>
+          <figcaption>
+            <span data-i18n="scMainCap">二维厂区布局求解：在 120 × 100 m 场地内放置 5 个功能体块，并输出约束满足状态。</span>
+            <span class="status prototype" data-i18n="researchOutput">SC‑TSE broader R&amp;D output</span>
+          </figcaption>
+        </figure>
+
+        <div class="media-grid sc-gallery">
+          <figure>
+            <button class="image-button" type="button" data-lightbox="assets/images/sc-tse-terrain-contours.png" data-title-zh="合成现状地形与等高线" data-title-en="Synthetic terrain and contours">
+              <img src="assets/images/sc-tse-terrain-contours.png" alt="SC-TSE 合成地形等高线与建筑轮廓结果" loading="lazy" width="1800" height="1100">
+            </button>
+            <figcaption><span data-i18n="terrainCap">地形与等高线：显示高程范围、剖面位置与设计标高候选。</span><span class="status prototype" data-i18n="syntheticData">合成验证数据</span></figcaption>
+          </figure>
+          <figure>
+            <button class="image-button" type="button" data-lightbox="assets/images/sc-tse-sections.png" data-title-zh="东西向与南北向地形剖面" data-title-en="East–west and north–south terrain sections">
+              <img src="assets/images/sc-tse-sections.png" alt="SC-TSE 东西向和南北向地形剖面图" loading="lazy" width="1800" height="1100">
+            </button>
+            <figcaption><span data-i18n="sectionsCap">剖面结果：把现状地形与设计标高放在同一坐标中比较。</span><span class="status prototype" data-i18n="syntheticData2">合成验证数据</span></figcaption>
+          </figure>
+          <figure>
+            <button class="image-button" type="button" data-lightbox="assets/images/sc-tse-earthwork.png" data-title-zh="场地挖填色谱与方量" data-title-en="Site cut-and-fill map and volumes">
+              <img src="assets/images/sc-tse-earthwork.png" alt="SC-TSE 场地挖填色谱，标注挖方、填方与净方量" loading="lazy" width="1800" height="1200">
+            </button>
+            <figcaption><span data-i18n="earthworkCap">挖填方结果：输出填挖分布、覆盖率和方量，用于验证工程计算链路。</span><span class="status prototype" data-i18n="syntheticData3">合成能力验证</span></figcaption>
+          </figure>
+          <figure>
+            <button class="image-button" type="button" data-lightbox="assets/images/engineering-spatial-kernel-prototype.png" data-title-zh="工程空间数据内核 Demo" data-title-en="Engineering spatial data kernel demo">
+              <img src="assets/images/engineering-spatial-kernel-prototype.png" alt="工程空间数据内核桌面原型界面" loading="lazy" width="2521" height="1785">
+            </button>
+            <figcaption><span data-i18n="kernelCap">空间数据内核：管理点、几何、语义对象及其绑定关系的桌面实验界面。</span><span class="status related" data-i18n="relatedPrototype">related engineering prototype</span></figcaption>
+          </figure>
+          <figure>
+            <button class="image-button" type="button" data-lightbox="assets/images/sc-tse-2d-block-solver-prototype.png" data-title-zh="二维语义体块约束求解器" data-title-en="2D semantic block constraint solver">
+              <img src="assets/images/sc-tse-2d-block-solver-prototype.png" alt="二维语义体块约束布局求解器桌面原型" loading="lazy" width="3199" height="1912">
+            </button>
+            <figcaption><span data-i18n="solverCap">二维体块求解：从结构化输入搜索可行布局，并输出 SVG、DXF 与校验记录。</span><span class="status related" data-i18n="relatedPrototype2">related engineering prototype</span></figcaption>
+          </figure>
+        </div>
+
+        <footer class="project-footer">
+          <div class="facts">
+            <span data-i18n="scFact1">结构化 JSON 输入</span>
+            <span data-i18n="scFact2">六节点计算主链</span>
+            <span data-i18n="scFact3">约束证据回传</span>
+          </div>
+          <a class="github-link" href="https://github.com/David7583/sc-tse" target="_blank" rel="noreferrer"><span data-i18n="viewGithub">查看 GitHub</span><span aria-hidden="true">↗</span></a>
+        </footer>
+        <p class="scope-note" data-i18n="scScope">范围说明：公开仓库是 Integration MVP，当前支持固定矩形体块的编辑、重算与校验；地形、挖填方、自动布局和空间内核截图展示的是同一研发方向下的更广泛实验结果，不代表公开 MVP 已包含这些界面或全部能力。</p>
+      </article>
+
+      <article class="project" id="yuantu">
+        <header class="project-intro">
+          <div><p class="project-number">02 / CORE</p><h3>Yuantu <small>源图</small></h3></div>
+          <p data-i18n="yuantuSummary">为政策文档、访谈记录等长期积累的非结构化文本建立可追溯知识层。原始材料保持不变，SQLite、ChromaDB、DuckDB 与 Neo4j 分别负责定位、语义、事实和关系检索，让结论能够回到原始证据。</p>
+        </header>
+        <div class="split-showcase">
+          <figure class="media-main">
+            <button class="image-button" type="button" data-lightbox="assets/images/yuantu-local-ai-workbench-prototype.png" data-title-zh="Local AI Workbench 系统总览" data-title-en="Local AI Workbench system overview">
+              <img src="assets/images/yuantu-local-ai-workbench-prototype.png" alt="Local AI Workbench 展示 SQLite、Chroma、DuckDB 与 Neo4j 状态" loading="lazy" width="3198" height="1791">
+              <span class="zoom-label" data-i18n="openImage2">点击查看</span>
+            </button>
+            <figcaption><span data-i18n="yuantuMainCap">相关工作台原型把四类存储与任务运行状态放在同一观察界面。</span><span class="status related" data-i18n="relatedPrototype3">related engineering prototype</span></figcaption>
+          </figure>
+          <div class="project-detail">
+            <div class="detail-window" aria-label="Workbench screenshot detail">
+              <img src="assets/images/yuantu-local-ai-workbench-prototype.png" alt="工作台原型中的数据端、理解端与行动端状态细节" loading="lazy" width="3198" height="1791">
+            </div>
+            <p data-i18n="yuantuDetail">解决的问题：大型模型直接检索长年累积材料时，答案容易失去来源。Yuantu 先定位文本单元，再从语义、事实和关系三个独立维度补充证据，并记录每一步运行信息。</p>
+            <a class="github-link" href="https://github.com/David7583/yuantu" target="_blank" rel="noreferrer"><span data-i18n="viewGithub2">查看 GitHub</span><span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <p class="scope-note" data-i18n="yuantuScope">范围说明：Yuantu 是研究原型，公开仓库完成了四数据库理解层，行动层仍在开发；上图是相关系统观察界面，不是仓库内发布的产品 UI。</p>
+      </article>
+
+      <article class="project" id="baigong">
+        <header class="project-intro">
+          <div><p class="project-number">03 / CORE</p><h3>Baigong <small>百工</small></h3></div>
+          <p data-i18n="baigongSummary">一个本地 Data–Action–Data 演示链路，用于验证 AI 在读取数据、调用能力和写回结果时，输入来自哪里、哪一版本执行、哪些动作获准，以及失败后如何定位。</p>
+        </header>
+        <div class="split-showcase reverse">
+          <figure class="media-main">
+            <button class="image-button" type="button" data-lightbox="assets/images/baigong-action-chat-prototype.png" data-title-zh="Action Chat 本地会话原型" data-title-en="Action Chat local-session prototype">
+              <img src="assets/images/baigong-action-chat-prototype.png" alt="Action Chat 本地会话原型，展示模型、路由、只读检索与运行详情" loading="lazy" width="3198" height="1891">
+              <span class="zoom-label" data-i18n="openImage3">点击查看</span>
+            </button>
+            <figcaption><span data-i18n="baigongMainCap">相关 Action Chat 原型展示模型选择、路由判断、只读检索和运行详情。</span><span class="status related" data-i18n="relatedPrototype4">related engineering prototype</span></figcaption>
+          </figure>
+          <div class="project-detail">
+            <div class="detail-window action-detail" aria-label="Action Chat screenshot detail">
+              <img src="assets/images/baigong-action-chat-prototype.png" alt="Action Chat 原型中的会话、路由与运行详情控制区域" loading="lazy" width="3198" height="1891">
+            </div>
+            <p data-i18n="baigongDetail">实际输出：稳定对象 ID、来源路径和内容哈希；每次运行的 run ID、版本与完成清单；对数据库写入、真实模型调用等动作设置显式确认门，并用结构化错误保留失败证据。</p>
+            <a class="github-link" href="https://github.com/David7583/baigong" target="_blank" rel="noreferrer"><span data-i18n="viewGithub3">查看 GitHub</span><span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <p class="scope-note" data-i18n="baigongScope">范围说明：公开仓库是可独立安装测试的治理链路 Demo，不是通用 Agent 产品；上图为相关交互原型，不是 Baigong 发布包中的正式界面。</p>
+      </article>
+    </section>
+
+    <section class="prototypes" aria-labelledby="prototype-title">
+      <div class="section-heading">
+        <span class="section-index">02</span>
+        <div><p class="kicker" data-i18n="prototypeKicker">EVIDENCE INTERFACE</p><h2 id="prototype-title" data-i18n="prototypeTitle">相关工程原型</h2></div>
+      </div>
+      <div class="prototype-row">
+        <figure class="prototype-media">
+          <button class="image-button" type="button" data-lightbox="assets/images/knowledge-evidence-workbench-prototype.png" data-title-zh="经验知识结构化笔记系统" data-title-en="Structured experience-notes workbench">
+            <img src="assets/images/knowledge-evidence-workbench-prototype.png" alt="经验知识工作台，展示来源、状态、知识条目与原始依据" loading="lazy" width="2472" height="1762">
+          </button>
+        </figure>
+        <div>
+          <span class="status related" data-i18n="independentPrototype">independent / related prototype</span>
+          <h3 data-i18n="knowledgeTitle">经验知识工作台</h3>
+          <p data-i18n="knowledgeCopy">用于整理工程经验条目，并把知识记录与原始截图来源并置。它体现了“结论可回到原始依据”的设计方向，但无法从公开仓库确认其属于某个正式发布项目，因此单独展示。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="secondary" aria-labelledby="secondary-title">
+      <div class="section-heading">
+        <span class="section-index">03</span>
+        <div><p class="kicker" data-i18n="secondaryKicker">SUPPORTING WORK</p><h2 id="secondary-title" data-i18n="secondaryTitle">次级项目</h2></div>
+      </div>
+      <div class="repo-list">
+        <a href="https://github.com/David7583/text-governance-pipeline" target="_blank" rel="noreferrer">
+          <span class="repo-index">01</span>
+          <span><b>text-governance-pipeline</b><em data-i18n="pipelineCopy">面向文本结构治理的策略驱动流水线仓库；公开仓库未提供 README，因此这里只采用其公开项目描述。</em></span>
+          <span aria-hidden="true">↗</span>
+        </a>
+        <a href="https://github.com/David7583/text-governance-tool" target="_blank" rel="noreferrer">
+          <span class="repo-index">02</span>
+          <span><b>text-governance-tool</b><em data-i18n="toolCopy">把非结构化文本转换为可登记结构单元，并为准入、噪声过滤与重要性判断保留可复现的策略决策记录。</em></span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <p class="kicker" data-i18n="contactKicker">CONTACT</p>
+      <h2 id="contact-title" data-i18n="contactTitle">对空间计算、知识基础设施或 AI 治理感兴趣？</h2>
+      <div class="contact-links">
+        <a href="mailto:1138133645@qq.com">1138133645@qq.com</a>
+        <a href="mailto:y23666176@gmail.com">y23666176@gmail.com</a>
+        <button class="wechat-copy" type="button" data-copy="15203793739"><span data-i18n="wechat">微信</span> · 15203793739 <span class="copy-state" data-i18n="copy">复制</span></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>© 2026 Ruixin Yang</span><span>Shanghai, China</span></footer>
+
+  <dialog class="lightbox" aria-label="Image preview">
+    <button class="lightbox-close" type="button" aria-label="Close image preview">×</button>
+    <figure><img src="" alt="" loading="lazy"><figcaption></figcaption></figure>
+  </dialog>
+</body>
+</html>
