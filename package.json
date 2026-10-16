@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "node scripts/check.mjs",
+    "test": "node scripts/check.mjs && node --test tests/*.test.mjs",
     "preview": "node scripts/serve.mjs",
     "audit": "node scripts/audit.mjs",
-    "format": "prettier --write \"assets/*.js\" \"assets/styles.css\" \"scripts/*.mjs\" package.json \".github/workflows/*.yml\""
+    "format": "prettier --write \"assets/*.{js,mjs,css}\" \"scripts/*.mjs\" \"tests/*.mjs\" \"content/*.json\" package.json \".github/workflows/*.yml\""
   },
   "engines": {
     "node": ">=22.19"

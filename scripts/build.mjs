@@ -1,3 +1,4 @@
+import { featureProduct, productPage } from "./workbench.mjs";
 import { writeFileSync, mkdirSync, readFileSync } from "node:fs";
 const imageSizes = JSON.parse(readFileSync("scripts/image-sizes.json", "utf8"));
 
@@ -289,10 +290,26 @@ const home =
 const projectIndex = `<nav class="project-index" aria-label="代表项目" data-label-zh="代表项目" data-label-en="Selected projects">${projects.map((p) => `<a href="projects/${p.id}.html"><span class="mono">${p.number}</span><span>${p.name}</span><span aria-hidden="true">↗</span></a>`).join("")}</nav>`;
 writeFileSync(
   "index.html",
-  home.replace(/<div class="hero-foot">[\s\S]*?<\/div>/, projectIndex),
+  home
+    .replace(/<div class="hero-foot">[\s\S]*?<\/div>/, projectIndex)
+    .replace(
+      /<article class="flagship">[\s\S]*?<\/article>/,
+      featureProduct({ image, feature, buttons }),
+    )
+    .replace(
+      "</head>",
+      '<link rel="stylesheet" href="assets/workbench.css"></head>',
+    ),
 );
 mkdirSync("projects", { recursive: true });
 for (const p of projects) {
+  if (p.id === "workbench") {
+    writeFileSync(
+      "projects/workbench.html",
+      productPage({ head, header, footer, image, feature: p }),
+    );
+    continue;
+  }
   const extras =
     p.id === "sc-tse"
       ? `<div class="research-gallery">${[
