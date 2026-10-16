@@ -1,9 +1,0 @@
-:root { --ink:#0a0d10; --paper:#f3f2ed; --line:#c7c8c3; --acid:#d8ff4f; }
-* { box-sizing:border-box; } body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.6 Inter,"Segoe UI","PingFang SC",sans-serif; }
-header,main { width:min(100% - 2rem, 920px); margin:auto; } header { display:flex; justify-content:space-between; align-items:center; padding:1.5rem 0; border-bottom:1px solid var(--ink); font-size:.85rem; }
-a { color:inherit; } button { border:1px solid var(--ink); border-radius:999px; background:transparent; padding:.4rem .75rem; cursor:pointer; }
-main { padding:5rem 0; } .intro { padding-bottom:4rem; } .intro>p { font-size:.72rem; font-weight:800; letter-spacing:.14em; } h1 { margin:.5rem 0 1rem; font-size:clamp(4rem,12vw,8rem); line-height:.9; letter-spacing:-.07em; } .intro div { max-width:42rem; font-size:1.2rem; }
-section:not(.intro) { display:grid; grid-template-columns:12rem 1fr; gap:2rem; padding:2rem 0; border-top:1px solid var(--line); } h2 { margin:0; font-size:.8rem; letter-spacing:.1em; text-transform:uppercase; } section>p { margin:0; } .item { margin-bottom:1.5rem; } .item h3 { margin:0 0 .25rem; font-size:1.5rem; } .item p { margin:0; }
-.en-only { display:none; } body.en .zh { display:none; } body.en .en-only { display:block; } h2 .en-only { display:none; } body.en h2 .en-only { display:inline; }
-@media(max-width:640px){ main{padding:3rem 0;} section:not(.intro){grid-template-columns:1fr;gap:.75rem;} }
-@media print { header { display:none; } main { padding:0; } body { background:white; } }
