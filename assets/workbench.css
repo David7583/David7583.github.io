@@ -335,7 +335,7 @@
   font-size: 11px;
 }
 .node-state {
-  font-size: 9px;
+  font-size: 11px;
   line-height: 1.7;
 }
 .node-name {
@@ -486,7 +486,15 @@
   margin-left: 12px;
   color: #17379b;
 }
+.flow-detail-link {
+  font-size: 12px;
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  padding: 12px 0;
+}
 .node-panel {
+  scroll-margin-top: 24px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px 50px;
@@ -770,16 +778,19 @@
     padding: 13px 9px;
   }
   .node-name {
-    font-size: 14px;
+    font-size: 15px;
+    min-height: 36px;
   }
   .node-type {
-    font-size: 8px;
+    font-size: 10px;
+    white-space: normal;
+    min-height: 28px;
   }
   .node-wire {
     width: 18px;
   }
   .node-state {
-    font-size: 8px;
+    font-size: 10px;
   }
   .flow-toolbar {
     padding: 15px;
@@ -928,16 +939,16 @@
   }
   .flow-nodes {
     grid-template-columns: 1fr;
-    gap: 22px;
-    padding: 24px 28px;
+    gap: 18px;
+    padding: 20px 22px;
   }
   .node-select {
-    min-height: 86px;
+    min-height: 74px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px 15px;
+    grid-template-columns: 1fr;
+    gap: 8px;
     align-items: center;
-    padding: 14px 16px;
+    padding: 11px 15px;
   }
   .node-top {
     grid-column: 1/-1;
@@ -947,20 +958,18 @@
     font-size: 10px;
   }
   .node-name {
-    font-size: 19px;
+    font-size: 18px;
     margin: 2px 0;
     min-height: 0;
   }
   .node-type {
-    font-size: 10px;
-    white-space: normal;
-    text-align: right;
+    display: none;
   }
   .node-wire {
     top: 100%;
     left: 50%;
     width: 1px;
-    height: 22px;
+    height: 18px;
   }
   .node-port {
     top: auto;
@@ -991,6 +1000,10 @@
   .flow-tour {
     order: 3;
     width: 100%;
+  }
+  .flow-detail-link {
+    order: 4;
+    padding: 7px 0;
   }
   .flow-toolbar button {
     font-size: 12px;

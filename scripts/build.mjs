@@ -240,7 +240,7 @@ const home =
     "Ruixin Yang · AI workbenches, spatial computation and traceable knowledge infrastructure. 开源项目与工程原型。",
   ) +
   header() +
-  `<main id="main" tabindex="-1"><section class="hero wrap"><div class="hero-copy"><p class="eyebrow"><span class="blue-dot"></span>${t("独立开发 · 空间计算 · AI 治理", "INDEPENDENT DEVELOPMENT · SPATIAL COMPUTATION · AI GOVERNANCE")}</p><h1>${t("让复杂系统<br>有迹可循。", "Complex systems.<br><em>Clear evidence.</em>")}</h1><p class="hero-intro">${t("我是 Ruixin Yang。我构建 AI 工作环境、空间计算工具与知识基础设施，把规则、来源和验证放进软件。", "I’m Ruixin Yang. I build AI work environments, spatial computing tools and knowledge infrastructure—with rules, provenance and verification built in.")}</p><div class="actions"><a class="button primary" href="#work">${t("探索代表项目", "Explore selected work")} <span aria-hidden="true">↓</span></a><a class="text-link" href="resume.html">${t("查看简历", "View résumé")} ↗</a></div></div>${diagram()}<div class="hero-foot"><span class="mono">ENGINEERING × DIGITAL LABORATORY</span><a href="#work">${t("从想法，到可检查的成果", "FROM IDEAS TO INSPECTABLE OUTCOMES")} ↓</a></div></section><section id="work" class="work wrap"><div class="section-heading"><p class="eyebrow">01 / SELECTED WORK</p><h2>${t("以项目，说明方法。", "The work explains<br>the approach.")}</h2><p>${t("可运行的代码、真实的界面，以及明确的实现边界。", "Runnable code, real interfaces and explicit implementation boundaries.")}</p></div><article class="flagship"><div class="project-top"><span class="mono">01 — AI SYSTEMS / DESKTOP</span><span class="status">${feature.status}</span></div><div class="feature-heading"><h3>Local AI<br>Workbench<span class="period">.</span></h3><div><p class="feature-statement">${t("让 AI 按规矩运行，<br>让能力自由组合。", "Let AI work within rules.<br>Let capabilities connect.")}</p><p>${feature.intro}</p>${buttons(feature)}</div></div>${image(feature, "", true)}<div class="feature-notes"><div><span class="mono">01 / COMPOSE</span><p>${t("端口、参数与连接，组成可编辑的工作流。", "Ports, parameters and connections form editable workflows.")}</p></div><div><span class="mono">02 / GOVERN</span><p>${t("能力被加载，不代表自动获得执行权限。", "Loading a capability does not automatically grant execution permission.")}</p></div><div><span class="mono">03 / INSPECT</span><p>${t("检查节点状态、结果与运行记录。", "Inspect node states, results and run records.")}</p></div></div><p class="scope-inline">${t("公开源码默认只加载聊天与基础框架；截图为配置内置节点后的实际运行。", "Public source loads chat and the core framework by default; the capture shows an actual run after configuring built-in nodes.")}</p></article>${projects
+  `<main id="main" tabindex="-1"><section class="hero wrap"><div class="hero-copy"><p class="eyebrow"><span class="blue-dot"></span>${t("独立开发 · 空间计算 · AI 治理", "INDEPENDENT DEVELOPMENT · SPATIAL COMPUTATION · AI GOVERNANCE")}</p><h1>${t("让复杂系统<br>有迹可循。", "Complex systems.<br><em>Clear evidence.</em>")}</h1><p class="hero-intro">${t("我是 Ruixin Yang。我构建 AI 工作环境、空间计算工具与知识基础设施，把规则、来源和验证放进软件。", "I’m Ruixin Yang. I build AI work environments, spatial computing tools and knowledge infrastructure—with rules, provenance and verification built in.")}</p><div class="actions"><a class="button primary" href="#work">${t("探索代表项目", "Explore selected work")} <span aria-hidden="true">↓</span></a><a class="text-link" href="resume.html">${t("查看简历", "View résumé")} ↗</a></div></div>${diagram()}<div class="hero-foot"><span class="mono">ENGINEERING × DIGITAL LABORATORY</span><a href="#work">${t("从想法，到可检查的成果", "FROM IDEAS TO INSPECTABLE OUTCOMES")} ↓</a></div></section><section id="work" class="work wrap"><div class="section-heading"><p class="eyebrow">01 / SELECTED WORK</p><h2>${t("以项目，说明方法。", "The work explains<br>the approach.")}</h2><p>${t("可运行的代码、真实的界面，以及明确的实现边界。", "Runnable code, real interfaces and explicit implementation boundaries.")}</p></div>${featureProduct({ image, feature, buttons })}${projects
     .slice(1)
     .map(
       (p) =>
@@ -293,10 +293,6 @@ writeFileSync(
   home
     .replace(/<div class="hero-foot">[\s\S]*?<\/div>/, projectIndex)
     .replace(
-      /<article class="flagship">[\s\S]*?<\/article>/,
-      featureProduct({ image, feature, buttons }),
-    )
-    .replace(
       "</head>",
       '<link rel="stylesheet" href="assets/workbench.css"></head>',
     ),
@@ -341,9 +337,7 @@ for (const p of projects) {
             ),
           )
           .join("")}</div>`
-      : p.id === "workbench"
-        ? `<div class="case-architecture"><div><p class="eyebrow">ARCHITECTURE / CONCEPT MAP</p><h2>${t("组织能力，<br>也组织边界。", "Organize capabilities.<br>And their boundaries.")}</h2><p>${p.future}</p></div>${diagram()}</div>${image({ image: "workbench-empty", alt: ["只加载聊天的空工作台", "Empty workbench with only chat loaded"], caption: t("实际界面 · 空工作台的默认状态", "Actual interface · Default empty-workbench state") }, "../")}`
-        : "";
+      : "";
   writeFileSync(
     `projects/${p.id}.html`,
     head(
