@@ -1,0 +1,122 @@
+[
+  {
+    "device": "desktop",
+    "page": "product",
+    "language": "zh",
+    "headings": 1,
+    "height": 1000,
+    "lang": "zh-CN",
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "device": "desktop",
+    "page": "home",
+    "language": "zh",
+    "headings": 1,
+    "height": 1000,
+    "lang": "zh-CN",
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "device": "desktop",
+    "page": "product",
+    "language": "en",
+    "headings": 1,
+    "height": 1000,
+    "lang": "en",
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "device": "desktop",
+    "page": "home",
+    "language": "en",
+    "headings": 1,
+    "height": 1000,
+    "lang": "en",
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "device": "tablet",
+    "page": "product",
+    "language": "zh",
+    "headings": 1,
+    "height": 1112,
+    "lang": "zh-CN",
+    "scrollWidth": 819,
+    "width": 834
+  },
+  {
+    "device": "tablet",
+    "page": "home",
+    "language": "zh",
+    "headings": 1,
+    "height": 1112,
+    "lang": "zh-CN",
+    "scrollWidth": 819,
+    "width": 834
+  },
+  {
+    "device": "tablet",
+    "page": "product",
+    "language": "en",
+    "headings": 1,
+    "height": 1112,
+    "lang": "en",
+    "scrollWidth": 819,
+    "width": 834
+  },
+  {
+    "device": "tablet",
+    "page": "home",
+    "language": "en",
+    "headings": 1,
+    "height": 1112,
+    "lang": "en",
+    "scrollWidth": 819,
+    "width": 834
+  },
+  {
+    "device": "mobile",
+    "page": "product",
+    "language": "zh",
+    "headings": 1,
+    "height": 844,
+    "lang": "zh-CN",
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "device": "mobile",
+    "page": "home",
+    "language": "zh",
+    "headings": 1,
+    "height": 844,
+    "lang": "zh-CN",
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "device": "mobile",
+    "page": "product",
+    "language": "en",
+    "headings": 1,
+    "height": 844,
+    "lang": "en",
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "device": "mobile",
+    "page": "home",
+    "language": "en",
+    "headings": 1,
+    "height": 844,
+    "lang": "en",
+    "scrollWidth": 375,
+    "width": 390
+  }
+]

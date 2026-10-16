@@ -7,7 +7,7 @@ import {
   panelContent,
   architecture,
 } from "../assets/workbench-data.mjs";
-import { validateMedia } from "../scripts/workbench.mjs";
+import { validateMedia, renderFilm } from "../scripts/workbench.mjs";
 test("guide terminates at either end and provides every bilingual contract", () => {
   let current = 0;
   for (let i = 0; i < 20; i++) current = nextStep(current, 1);
@@ -74,4 +74,26 @@ test("pending film stays honest and cannot download video on first load", () => 
     assert.match(html, /<video hidden controls playsinline/);
     assert.doesNotMatch(html, /<video[^>]*\ssrc=/);
   }
+});
+
+test("approved film markup exposes controls and defers both media and captions", () => {
+  const html = renderFilm({
+    src: "https://example.com/product.mp4?edition=1&format=mp4",
+    type: "video/mp4",
+    durationSeconds: 60,
+    rightsReviewed: true,
+    captions: [{ src: "https://example.com/product.en.vtt", lang: "en" }],
+  });
+  assert.match(
+    html,
+    /<video hidden controls playsinline crossorigin="anonymous" preload="none"/,
+  );
+  assert.match(
+    html,
+    /data-source="https:\/\/example.com\/product.mp4\?edition=1&amp;format=mp4"/,
+  );
+  assert.match(html, /<track kind="captions" srclang="en"/);
+  assert.doesNotMatch(html, /<(video|track)[^>]*\ssrc=/);
+  assert.match(html, /class="film-error" hidden role="alert"/);
+  assert.match(html, /class="film-retry"/);
 });
