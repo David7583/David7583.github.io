@@ -1,0 +1,46 @@
+{
+  "baigong-action-chat-prototype": [
+    1600,
+    946
+  ],
+  "engineering-spatial-kernel-prototype": [
+    1600,
+    1133
+  ],
+  "knowledge-evidence-workbench-prototype": [
+    1600,
+    1140
+  ],
+  "sc-tse-2d-block-solver-prototype": [
+    1600,
+    956
+  ],
+  "sc-tse-earthwork": [
+    1600,
+    1067
+  ],
+  "sc-tse-factory-layout": [
+    1400,
+    1000
+  ],
+  "sc-tse-sections": [
+    1600,
+    978
+  ],
+  "sc-tse-terrain-contours": [
+    1600,
+    978
+  ],
+  "yuantu-local-ai-workbench-prototype": [
+    1600,
+    896
+  ],
+  "workbench-flow": [
+    1600,
+    900
+  ],
+  "workbench-empty": [
+    1440,
+    960
+  ]
+}

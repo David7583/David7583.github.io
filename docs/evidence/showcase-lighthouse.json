@@ -1,0 +1,70 @@
+[
+  {
+    "name": "home-mobile",
+    "url": "http://127.0.0.1:4173/?lang=zh",
+    "version": "13.5.0",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": "1.2\u00a0s",
+      "largest-contentful-paint": "1.4\u00a0s",
+      "cumulative-layout-shift": "0",
+      "total-blocking-time": "0\u00a0ms"
+    }
+  },
+  {
+    "name": "home-desktop",
+    "url": "http://127.0.0.1:4173/?lang=en",
+    "version": "13.5.0",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": "0.3\u00a0s",
+      "largest-contentful-paint": "0.3\u00a0s",
+      "cumulative-layout-shift": "0",
+      "total-blocking-time": "0\u00a0ms"
+    }
+  },
+  {
+    "name": "workbench",
+    "url": "http://127.0.0.1:4173/projects/workbench.html?lang=en",
+    "version": "13.5.0",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": "1.3\u00a0s",
+      "largest-contentful-paint": "1.7\u00a0s",
+      "cumulative-layout-shift": "0",
+      "total-blocking-time": "0\u00a0ms"
+    }
+  },
+  {
+    "name": "resume",
+    "url": "http://127.0.0.1:4173/resume.html?lang=zh",
+    "version": "13.5.0",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": "1.0\u00a0s",
+      "largest-contentful-paint": "1.1\u00a0s",
+      "cumulative-layout-shift": "0",
+      "total-blocking-time": "0\u00a0ms"
+    }
+  }
+]

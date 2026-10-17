@@ -1,0 +1,56 @@
+[
+  {
+    "path": "/assets/workbench-data.mjs",
+    "method": "GET",
+    "range": null,
+    "status": 200,
+    "type": "text/javascript; charset=utf-8",
+    "bytes": 7975,
+    "contentRange": null
+  },
+  {
+    "path": "/media/qa/film.mp4",
+    "method": "HEAD",
+    "range": null,
+    "status": 200,
+    "type": "video/mp4",
+    "bytes": 0,
+    "contentRange": null
+  },
+  {
+    "path": "/media/qa/film.mp4",
+    "method": "GET",
+    "range": "bytes=0-99",
+    "status": 206,
+    "type": "video/mp4",
+    "bytes": 100,
+    "contentRange": "bytes 0-99/5098207"
+  },
+  {
+    "path": "/media/qa/film.mp4",
+    "method": "GET",
+    "range": "bytes=-100",
+    "status": 206,
+    "type": "video/mp4",
+    "bytes": 100,
+    "contentRange": "bytes 5098107-5098206/5098207"
+  },
+  {
+    "path": "/media/qa/film.mp4",
+    "method": "GET",
+    "range": "bytes=999999999-",
+    "status": 416,
+    "type": null,
+    "bytes": 0,
+    "contentRange": "bytes */5098207"
+  },
+  {
+    "path": "/.git/config",
+    "method": "GET",
+    "range": null,
+    "status": 403,
+    "type": null,
+    "bytes": 0,
+    "contentRange": null
+  }
+]

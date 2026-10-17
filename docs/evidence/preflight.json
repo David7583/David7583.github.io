@@ -1,0 +1,36 @@
+{
+  "staged_files": 61,
+  "findings": [],
+  "node_preview": [
+    {
+      "path": "/",
+      "status": 200,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/resume.html?lang=en",
+      "status": 200,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/projects/workbench.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/assets/styles.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/assets/app.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/assets/images/workbench-flow.webp",
+      "status": 200,
+      "type": "image/webp"
+    }
+  ]
+}

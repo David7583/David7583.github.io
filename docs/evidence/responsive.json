@@ -1,0 +1,30 @@
+[
+  {
+    "size": "tablet",
+    "lang": "zh",
+    "heading": "让复杂系统\n有迹可循。",
+    "scrollWidth": 819,
+    "viewport": 834
+  },
+  {
+    "size": "tablet",
+    "lang": "en",
+    "heading": "Complex systems.\nClear evidence.",
+    "scrollWidth": 819,
+    "viewport": 834
+  },
+  {
+    "size": "mobile",
+    "lang": "zh",
+    "heading": "让复杂系统\n有迹可循。",
+    "scrollWidth": 375,
+    "viewport": 390
+  },
+  {
+    "size": "mobile",
+    "lang": "en",
+    "heading": "Complex systems.\nClear evidence.",
+    "scrollWidth": 375,
+    "viewport": 390
+  }
+]

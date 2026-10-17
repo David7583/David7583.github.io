@@ -1,0 +1,22 @@
+name: Portfolio checks
+on:
+  push:
+    branches: [feature/portfolio-redesign]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: git diff --exit-code -- index.html resume.html projects
+      - run: npm test
+# Deliberately no deployment or Pages write permission.
